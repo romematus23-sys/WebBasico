@@ -1,0 +1,16 @@
+<div class="navbar">
+  <span class="navbar-brand">Mi primer app</span>
+  <a> Inicio</a>
+</div>
+
+<main>
+  <div class="tarjeta"> 
+    <h2>Mi Presentación </h2>
+    <p> nombre: {{user1.nombre}}</p>
+    <p> Profesión:{{user1.profesion}}</p>
+    <p> sobre mi: {{user1.acerca}}</p>
+    <button (click)="executeAction(user1)"> Oprime</button>
+    <button (click)="changeNameUpper()">upper</button>
+    <button (click)="changeNameLower()">lower</button>
+  </div>
+</main>

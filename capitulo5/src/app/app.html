@@ -1,0 +1,17 @@
+<div class="navbar">
+  <span class="navbar-brand">CONTROL DE ARMAMENTO</span>
+  <a> Inicio</a>
+</div>
+
+<main>
+  <div class="tarjeta"> 
+    <h2>ARMAMENTO </h2>
+    <p> Arma: {{arma1.arma}}</p>
+    <p> Estado:{{arma1.estado}}</p>
+    <p> Folio: {{arma1.folio}}</p>
+    <p> Tipo: {{arma1.tipo}}</p>
+    <button (click)="executeAction(arma1)"> CARGAR</button>
+    <button (click)="changeNameUpper()">upper</button>
+    <button (click)="changeNameLower()">lower</button>
+  </div>
+</main>

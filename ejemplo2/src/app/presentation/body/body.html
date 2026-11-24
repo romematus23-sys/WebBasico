@@ -1,0 +1,18 @@
+
+<div class="container py-5">
+    <div class="card shadow mx-auto";>
+        <div class="card-body text-center">
+
+            <h2>Calcular Factorial</h2>
+
+            <div class="mb-3">
+                <input class="form-control" type="number" #textInput (input)="numero.set(+textInput.value)">
+            </div>
+            <button class="btn btn-success mb-3" (click)="calcular()">Calcular</button>
+              <div>
+                <label class="form-label">Resultado</label>
+                <input class="form-control text-center" type="number" [value]="resultado()"readonly></div>
+
+        </div>
+    </div>
+</div>

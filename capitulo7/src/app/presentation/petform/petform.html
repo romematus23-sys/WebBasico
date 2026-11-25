@@ -1,0 +1,56 @@
+<div class="card shadow border-0">
+    <div class="card-header">
+        <h2 class="h5 mb-0"> Registro de mascotas</h2>
+
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" type="text" [(ngModel)]="pet().name">
+        </div>
+
+    
+    
+        <div class="mb-3">
+            <label class="form-label">Edad</label>
+            <input class="form-control" type="number" [(ngModel)]="pet().age">
+            @if(error()){
+                <div class="mb-3">
+                    <p class="text-danger">{{mensaje()}}</p>
+
+                </div>
+
+            }
+        </div>
+
+
+        
+            <div class="mb-3">
+                <label class="form-label">Raza</label>
+                <input class="form-control" type="text" [(ngModel)]="pet().breed">
+            
+
+            <div class="mb-3">
+                <label class="form-label">
+                    Especie</label>
+                <select class="form-select" [(ngModel)]="pet().specie">
+                    @for (t of options; track $index){
+                    <option> {{t}}
+                    </option>
+                    }
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" (click)="emitPet()">
+                    Registrar
+
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>

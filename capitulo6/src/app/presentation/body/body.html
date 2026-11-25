@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <h1 class="display-7 text-center mb-4">Catalogo de productos</h1>
+    <!-- esto es para ver las tarjetas, los corchetes siginifan que vamos enviar informacion y en los parentesis es que vamos a reciber solo en los html de angular --> 
+    <div class="row g-4">
+        @for(t of products(); track $index){
+            <app-productcard 
+            [product]="t"
+            (nameDelete)="deleteProduct($event)">
+            
+            </app-productcard> <!-- esto es para traer los datos de los prooductos y ponerlos en la  tarjetas --> 
+
+        }
+
+
+    </div>
+
+</div>
+

@@ -1,0 +1,16 @@
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+
+        <h3 class="card-title fw-bold">{{arma()?.tipo}}</h3> 
+
+        <p  class= "card-text"> 
+            <strong> tipo:</strong> {{arma()?.tipo}}
+        </p>
+        <p  class="card-text"> 
+            <strong> Descripcion:</strong>  {{arma()?.description}}
+        </p>
+        <p  class="card-text fs-4 fw-bold text-secondary"> Folio: {{arma()?.folio}}</p>
+        <button class="btn btn-danger" (click)="emitProductName()"> X</button>
+
+    </div>
+</div>

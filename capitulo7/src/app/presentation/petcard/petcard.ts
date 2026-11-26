@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { Pet } from '../../domain/entities';
 
 @Component({
   imports: [],
@@ -6,4 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './petcard.css',
   templateUrl: './petcard.html',
 })
-export class Petcard {}
+export class Petcard {
+//input que recibe la mascota 
+
+pet=input<Pet>();
+
+//output emite el nombre de la mascota 
+
+namePet=output<string>();
+
+emitNamePet(){
+  this.namePet.emit(this.pet()?.name??"");
+}
+
+
+}

@@ -1,0 +1,9 @@
+<div class="container">
+    @for (t of perros (); track $index) {
+        <h1>{{t.name}}</h1>
+        <h2>{{t.description}}</h2>
+        <h3>{{t.maxLife}}</h3>
+        <img src="{{t.urlImage}}" width="200px">
+        <br>
+    }
+</div>

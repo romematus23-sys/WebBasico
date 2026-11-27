@@ -1,0 +1,22 @@
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+
+        <h3 class="card-title fw-bold">{{arma()?.id}}</h3> 
+
+        <p  class= "card-text"> 
+            <strong> NOMBRE:</strong> {{arma()?.name}}
+        </p>
+        <p  class="card-text"> 
+            <strong> DESCRIPCION:</strong>  {{arma()?.description}}
+        </p>
+        <p  class="card-text fs-4 fw-bold text-secondary"> CALIBRE: {{arma()?.caliber}}</p>
+        <p  class= "card-text"> 
+            <strong> PRECIO:</strong> {{arma()?.price}}
+        </p>
+
+
+        <button class="btn btn-danger" (click)="emitArmaName()"> X</button>
+
+    </div>
+</div>
+

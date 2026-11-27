@@ -1,0 +1,229 @@
+
+<div class="container py-5">
+
+    <!-- ENCABEZADO -->
+    <div class="text-center p-4 rounded-4 mb-5 text-white shadow"
+         style="background: linear-gradient(135deg, #596747, #7b8967);">
+
+        <div class="mb-3">
+            <i class="bi bi-people-fill display-3"></i>
+        </div>
+
+        <h1 class="display-5 fw-bold">
+            GESTIÓN DE PERSONAS
+        </h1>
+
+        <p class="mb-0 mt-3">
+            Registro, administración y consulta de personas.
+        </p>
+
+    </div>
+
+
+    <!-- PRESENTACIÓN -->
+    <div class="text-center mb-5">
+
+        <span class="badge rounded-pill px-3 py-2"
+              style="background-color: #e1e7d8; color: #596747;">
+            SISTEMA ADMINISTRATIVO
+        </span>
+
+        <h2 class="fw-bold mt-3" style="color: #596747;">
+            Directorio de personas
+        </h2>
+
+        <p class="text-secondary mt-3">
+            En este apartado puedes registrar nuevas personas
+            y consultar la información de los registros existentes.
+        </p>
+
+        <div class="mx-auto mt-3 rounded-pill"
+             style="width: 70px; height: 4px; background-color: #879477;">
+        </div>
+
+    </div>
+
+
+    <!-- FORMULARIO Y DIRECTORIO -->
+    <div class="row g-4">
+
+        <!-- FORMULARIO -->
+        <div class="col-12 col-lg-4">
+
+            <div class="card shadow border-0 rounded-4 h-100">
+
+                <div class="card-header text-white p-3 rounded-top-4"
+                     style="background-color: #596747;">
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="bi bi-person-plus-fill fs-4"></i>
+
+                        <h3 class="h5 fw-bold mb-0">
+                            Registrar persona
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body p-4">
+
+                    <p class="text-secondary small mb-4">
+                        Completa los siguientes datos para agregar
+                        una nueva persona al directorio.
+                    </p>
+
+                    <app-persform
+                        (newPersona)="insertPersona($event)">
+                    </app-persform>
+
+                </div>
+
+                <div class="card-footer border-0 p-3"
+                     style="background-color: #f1f3ed;">
+
+                    <small class="text-secondary">
+                        <i class="bi bi-shield-check me-2"
+                           style="color: #596747;"></i>
+                        Registro de información
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIRECTORIO -->
+        <div class="col-12 col-lg-8">
+
+            <div class="card border-0 shadow rounded-4 overflow-hidden">
+
+                <div class="card-header text-white p-3"
+                     style="background-color: #596747;">
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="bi bi-person-vcard-fill fs-4"></i>
+
+                        <h3 class="h5 fw-bold mb-0">
+                            Personas registradas
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body p-4"
+                     style="background-color: #eef0e9;">
+
+                    <div class="row g-4">
+
+                        @for(t of personas(); track $index) {
+
+                            <div class="col-12 col-md-6">
+
+                                <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                                    <app-perscard
+                                        [persona]="t"
+                                        (nameDelete)="deletePersona($event)">
+                                    </app-perscard>
+
+                                </div>
+
+                            </div>
+
+                        } @empty {
+
+                            <div class="col-12">
+
+                                <div class="text-center bg-white p-5 rounded-4 shadow-sm">
+
+                                    <i class="bi bi-people display-3"
+                                       style="color: #879477;"></i>
+
+                                    <h5 class="fw-bold mt-3"
+                                        style="color: #596747;">
+                                        No hay personas registradas
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Utiliza el formulario para agregar
+                                        una nueva persona al directorio.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECOMENDACIONES -->
+    <div class="mt-5 p-4 rounded-4 shadow-sm"
+         style="background-color: #eef0e9;">
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+
+            <i class="bi bi-lightbulb-fill fs-3"
+               style="color: #596747;"></i>
+
+            <h4 class="fw-bold mb-0" style="color: #596747;">
+                Recomendaciones para el registro
+            </h4>
+
+        </div>
+
+        <ul class="text-secondary mb-0">
+            <li class="mb-2">
+                Verificar que los datos ingresados sean correctos.
+            </li>
+
+            <li class="mb-2">
+                Mantener actualizada la información de las personas.
+            </li>
+
+            <li>
+                Proteger los registros y limitar su acceso al personal autorizado.
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="text-center text-white p-4 rounded-4 mt-5 shadow"
+         style="background-color: #343a33;">
+
+        <i class="bi bi-person-lines-fill display-5"></i>
+
+        <h5 class="fw-bold mt-3">
+            SISTEMA DE GESTIÓN
+        </h5>
+
+        <p class="mb-2">
+            Registro y administración de personas
+        </p>
+
+        <hr class="mx-auto w-25 border-light">
+
+        <small>
+            © 2026 | Desarrollado por Romelia Matuz Robles
+        </small>
+
+    </div>
+
+</div>

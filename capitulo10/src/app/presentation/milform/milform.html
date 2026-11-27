@@ -1,0 +1,54 @@
+<div class="card shadow border-0">
+    <div class="card-header">
+        <h2 class="h5 mb-0"> Registro de armas</h2>
+
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Id</label>
+            <input class="form-control" type="number"[ngModel]="arma().id"
+                (ngModelChange)="arma.update(a => ({...a, id: +$event}))" >
+        </div>
+            
+    
+    
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" type="text" [(ngModel)]="arma().name">
+            
+        </div>
+        
+
+
+        
+            <div class="mb-3">
+                <label class="form-label">DESCRIPCION</label>
+                <input class="form-control" type="text" [(ngModel)]="arma().description">
+
+
+
+                 <div class="mb-3">
+            <label class="form-label">Caliber</label>
+            <input class="form-control" type="text" [(ngModel)]="arma().caliber">
+        
+        </div>
+
+         <div class="mb-3">
+            <label class="form-label">Precio</label>
+            <input class="form-control" type="number" [(ngModel)]="arma().price">
+            
+        </div>
+        
+
+            <div class="mb-3">
+                <button class="btn btn-primary" (click)="emitArma()">
+                    Registrar
+
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>

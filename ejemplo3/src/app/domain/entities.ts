@@ -4,3 +4,12 @@ export interface Arma{
     estado:string;
     description:string;
 }
+
+
+export interface Arma{
+    id:number;
+    name:string;
+    description:string;
+    caliber:string;
+    price: number;
+}

@@ -1,0 +1,21 @@
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+
+
+        <p  class= "card-text"> 
+            <strong> NOMBRE:</strong> {{persona()?.name}}
+        </p>
+        <p  class="card-text"> 
+            <strong> EDAD:</strong>  {{persona()?.edad}}
+        </p>
+        <p  class="card-text"> 
+            <strong> SEXO:</strong>  {{persona()?.sexo}}
+        </p>
+        
+
+
+        <button class="btn btn-danger" (click)="emitPersonaName()"> X</button>
+
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+<div class="card shadow border-0">
+    <div class="card-header">
+        <h2 class="h5 mb-0"> Registro de Personas</h2>
+
+    </div>
+    <div class="card-body">
+        
+    
+    
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" type="text" [(ngModel)]="persona().name"
+            (ngModelChange)="persona.update(p => ({...p, name: $event}))">
+        </div>
+        
+            <div class="mb-3">
+                <label class="form-label">EDAD</label>
+                <input class="form-control" type="number" [(ngModel)]="persona().edad"
+                (ngModelChange)="persona.update(p => ({...p, edad: +$event}))">>
+
+
+
+                 <div class="mb-3">
+            <label class="form-label">SEXO</label>
+            <input class="form-control" type="text" [(ngModel)]="persona().sexo"
+            (ngModelChange)="persona.update(p => ({...p, sexo: $event}))">
+        
+        </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" (click)="emitPersona()">
+                    Registrar
+
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>
